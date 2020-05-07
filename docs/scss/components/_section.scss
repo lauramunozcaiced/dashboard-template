@@ -1,0 +1,117 @@
+section{
+    &.statistics{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &.network-report{
+        .chart__container{
+            height: 250px;
+            width: 70%;
+            @include mq('phone'){
+                width: 100%;
+            }
+        }
+        .subpanel{
+            width: 28%;
+            @include mq('phone'){
+                width: 100%;
+            }
+        }
+    }
+    &.reports{
+        display: flex;
+        @include mq('min-tablet'){
+            flex-wrap: wrap;
+        }
+        
+        .panel{   
+            width: 31.5%;  
+            @include mq('min-tablet'){
+                width: 100%;
+            }
+        
+            
+        }
+        .chart__container{
+            height: auto;
+            width: 100%;
+            max-width: 100%;
+        }
+        .quick-settings{
+            width: 100%;
+            display: flex;
+            &--left{
+                width: 40%;
+            }
+            &--right{
+                width: 60%;
+            }
+            i{
+                margin-right: .3rem;
+            }
+            .chart__container{
+                circle{
+                    display: none;
+                }
+            }
+        }
+    }
+    &.activities{
+        display: flex;
+        @include mq('min-tablet'){
+            flex-wrap: wrap;
+        }
+        .content-left{
+            width: 40%; 
+            @include mq('min-tablet'){
+                width: 100%;
+            }
+        }
+        .content-right{
+            width: 60%;
+            @include mq('min-tablet'){
+                width: 100%;
+            }
+        }
+        .geo-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            &__content{
+                width: 40%
+            }
+            .chart__container{
+                width: 60%;
+            }
+        }
+        .widget-weather{
+            width: 100%;
+            .today-weather{
+                padding: .5rem;
+                display: flex;
+                .day-weather{
+                    display: flex;
+                    flex-direction: column;
+                    i{
+                        margin: .5rem 0;
+                        font-size: 50px;
+                    }
+                }
+                .place-weather{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: .5rem;
+                    h6:nth-child(2){
+                        font-style: italic;
+                    }
+                }
+            }
+            .celsius-weather{
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.stats{
+    width: fit-content;
+    margin: .3rem;
+    padding: .5rem;
+    border-right: 2px solid $gray;
+    &:last-child{
+        border-right: none;
+    }
+    .stats__number{
+        font-size: 38px;
+        line-height: 1;
+        b{
+            color: $green; 
+        }
+    }
+    h6{
+        b{
+            color: $green;
+            font-weight: 300;
+            font-style: italic;
+        }
+        i{
+            margin-right: .2rem;
+        }
+        .red{
+            color: $red;
+        }
+    } 
+}

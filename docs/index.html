@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Dashboard Gentelella Alela with chart and stadistic users information"/>
+    <meta name="keywords" content="Gentelella Alela, Dashboard, Charts, Stadistics, Users, Informations, Weather"/>
+    <meta name="author" content="Gentelella Alela" />
+    <meta name="copyright" content="Gentelella Alela" />
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="43200"/>
+    <title>Gentelella Alela - Prueba Técnica</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script async src="./js/main.js"></script>
+    <script src="./js/charts.js"></script>
+</head>
+
+<body onresize="menuHidden();">
+    <div class="full-content">
+        <nav id="navmenu" class="navmenu">
+            <div class="navmenu__container">
+                <div class="company-logo"><i class="fas fa-paw"></i></div>
+                <h1>Gentelella Alela!</h1>
+                <button onclick="toggleNavmenu()"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="navmenu__container">
+                <div class="user-avatar"></div>
+                <div class="user-greeting">
+                    <h6>Welcome,</h6>
+                    <h6>Jhon Doe</h6>
+                </div>
+            </div>
+            <div class="navmenu__list">
+                <h6>General</h6>
+                <ul>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-home"></i>
+                                <a>Home</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-edit"></i>
+                                <a>Forms</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-desktop"></i>
+                                <a>UI Elements</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-table"></i>
+                                <a>Tables</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-chart-bar"></i>
+                                <a>Data Presentation</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-file"></i>
+                                <a>Layouts</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="navmenu__list">
+                <h6>Live on</h6>
+                <ul>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-bug"></i>
+                                <a>Additional Pages</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fab fa-windows"></i>
+                                <a>Extras</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-project-diagram"></i>
+                                <a>Multilevel Menu</a>
+                            </div>
+                            <div>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="navmenu__item-list">
+                            <div>
+                                <i class="fas fa-laptop"></i>
+                                <a>Landing Page</a>
+                            </div>
+                            <div>
+                                <a>Coming Soon</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <main id="main" role="main">
+            <header>
+                <div class="icon-menu"><button onclick="toggleNavmenu();"><i class="fas fa-bars"></i></button></div>
+                <div class="information-container">
+                    <div class="notification-container">
+                    <button><i class="far fa-envelope"></i></button>
+                    <span class="number-notification">2</span>
+                    </div>
+                    <div class="user-avatar"></div>
+                    <p class="user-name"> Jhon Doe</p>
+                    <i class="fas fa-caret-down"></i>
+
+                </div>
+            </header>
+            <article>
+                <section class="statistics">
+                    <div class="stats">
+                        <h6><i class="fas fa-user"></i>Total Users</h6>
+                        <div class="stats__number"><h2>2500</h2></div>
+                        <h6><b>4%</b> From last Week</h6>
+                    </div>
+                    <div class="stats">
+                        <h6><i class="far fa-clock"></i>Average Time</h6>
+                        <div class="stats__number"><h2>123.50</h2></div>
+                        <h6><b><i class="fas fa-sort-up"></i>3%</b> From last Week</h6>
+                    </div>
+                    <div class="stats">
+                        <h6><i class="fas fa-user"></i>Total Males</h6>
+                        <div class="stats__number"><h2><b>2,500</b></h2></div>
+                        <h6><b><i class="fas fa-sort-up"></i>4%</b> From last We..</h6>
+                    </div>
+                    <div class="stats">
+                        <h6><i class="fas fa-user"></i>Total Females</h6>
+                        <div class="stats__number"><h2>4,567</h2></div>
+                        <h6><b class="red"><i class="fas fa-sort-down"></i>12%</b> From last We...</h6>
+                    </div>
+                    <div class="stats">
+                        <h6><i class="fas fa-user"></i>Total Collections</h6>
+                        <div class="stats__number"><h2>2,315</h2></div>
+                        <h6><b><i class="fas fa-sort-up"></i>34%</b> From last We..</h6>
+                    </div>
+                    <div class="stats">
+                        <h6><i class="fas fa-user"></i>Total Conections</h6>
+                        <div class="stats__number"><h2>7,325</h2></div>
+                        <h6><b><i class="fas fa-sort-up"></i>34%</b> From last We..</h6>
+                    </div>
+                    
+                </section>
+                <section class="network-report">
+                    <div class="panel">
+                        <div class="panel__title">
+                            <div class="panel__title-left">
+                                <h2>Network Activities</h2>
+                                <span>Graph title subtitle</span>
+                            </div>
+                            <div class="panel__title-right">
+                                <div class="date-square">
+                                    <label>&#9633; February 9, 2020 - March 9, 2020</label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                            <div class="panel__body">
+                                <div id="chart_div" class="chart__container"></div>
+                                <div class="subpanel">
+                                    <div class="panel__title">
+                                        <h2>Top Campaign Performance</h2>
+                                    </div>
+                                    <div class="pane__body">
+                                        <div class="fields">
+                                            <div class="field__leveltext">
+                                                <span>Facebook Campaing</span>
+                                                <div class="level">
+                                                    <div class="level-bar" style="width: 80%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="field__leveltext">
+                                                <span>Twitter Campaig</span>
+                                                <div class="level">
+                                                    <div class="level-bar" style="width: 60%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="field__leveltext">
+                                                <span>Conventional Media</span>
+                                                <div class="level">
+                                                    <div class="level-bar" style="width: 40%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="field__leveltext">
+                                                <span>Bill Boards</span>
+                                                <div class="level">
+                                                    <div class="level-bar" style="width: 50%;"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </section>
+                <section class="reports">
+                    <div class="panel">
+                        <div class="panel__title">
+                            <div class="panel__title-left">
+                                <span>App Versions</span>
+                            </div>
+                            <div class="panel__title-right">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-wrench"></i>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="panel__body">
+                            <div class="fields">
+                                <p>App Usage across version</p>
+                                <div class="field__leveltext field__leveltext--flex">
+                                    <span>0.1.5.2</span>
+                                    <div class="level">
+                                        <div class="level-bar" style="width: 80%;"></div>
+                                    </div>
+                                    <span class="end">123K</span>
+                                </div>
+                                <div class="field__leveltext field__leveltext--flex">
+                                    <span>0.1.5.3</span>
+                                    <div class="level">
+                                        <div class="level-bar" style="width: 53%;"></div>
+                                    </div>
+                                    <span class="end">53K</span>
+                                </div>
+                                <div class="field__leveltext field__leveltext--flex">
+                                    <span>0.1.5.4</span>
+                                    <div class="level">
+                                        <div class="level-bar" style="width: 23%;"></div>
+                                    </div>
+                                    <span class="end">23K</span>
+                                </div>
+                                <div class="field__leveltext field__leveltext--flex">
+                                    <span>0.1.5.5</span>
+                                    <div class="level">
+                                        <div class="level-bar" style="width: 3%;"></div>
+                                    </div>
+                                    <span class="end">3K</span>
+                                </div>
+                                <div class="field__leveltext field__leveltext--flex">
+                                    <span>0.1.5.6</span>
+                                    <div class="level">
+                                        <div class="level-bar" style="width: 1%;"></div>
+                                    </div>
+                                    <span class="end">1K</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel__title">
+                            <div class="panel__title-left">
+                                <span>Device Usage</span>
+                            </div>
+                            <div class="panel__title-right">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-wrench"></i>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="panel__body">
+                            <div id="donutchart" class="chart__container"></div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel__title">
+                            <div class="panel__title-left">
+                                <span>Quick Settings</span>
+                            </div>
+                            <div class="panel__title-right">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-wrench"></i>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="panel__body">
+                            <div class="quick-settings">
+                                <div class="quick-settings quick-settings--left">
+                                    <div class="content">
+                                        <h6><i class="fas fa-car-battery"></i> Settings</h6>
+                                        <h6><i class="fas fa-bars"></i> Subscription</h6>
+                                        <h6><i class="fas fa-chart-bar"></i> Auto Renewal</h6>
+                                        <h6><i class="fas fa-chart-line"></i> Achievements</h6>
+                                        <h6><i class="fas fa-chart-bar"></i> Auto Renewal</h6>
+                                        <h6><i class="fas fa-chart-line"></i> Achievements</h6>
+                                        <h6><i class="fas fa-chart-area"></i> Logout</h6>
+                                    </div>
+                                </div>
+                                <div class="quick-settings quick-settings--right">
+                                    <div id="donutmiddlechart" class="chart__container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="activities">
+                    <div class="content-left">
+                        <div class="panel">
+                            <div class="panel__title">
+                                <div class="panel__title-left">
+                                    <span>Recent Activities</span>
+                                    <label>Sessions</label>
+                                </div>
+                                <div class="panel__title-right">
+                                    <i class="fas fa-angle-up"></i>
+                                    <i class="fas fa-wrench"></i>
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel__body">
+                                <div class="fields">
+                                    <div class="line"></div>
+                                    <div class="field__activity">
+                                        <div class="field__activity-first">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="field__activity-content">
+                                            <h6>Who Needs Sundance When You’ve Got Crowdfunding</h6>
+                                            <label>13 hours ago by Jane Smit</label>
+                                            <p>Film festivals used to be do-or-die moments for movie makers. They were where you met
+                                                the producers that could fund your project, and if the buyers liked your flick, they’d pay to
+                                                Fast-forward and… Read Mor</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="field__activity">
+                                        <div class="circle"></div>
+                                        <div class="field__activity-content">
+                                            <h6>Who Needs Sundance When You’ve Got Crowdfunding</h6>
+                                            <label>13 hours ago by Jane Smit</label>
+                                            <p>Film festivals used to be do-or-die moments for movie makers. They were where you met
+                                                the producers that could fund your project, and if the buyers liked your flick, they’d pay to
+                                                Fast-forward and… Read Mor</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="field__activity">
+                                        <div class="circle"></div>
+                                        <div class="field__activity-content">
+                                            <h6>Who Needs Sundance When You’ve Got Crowdfunding</h6>
+                                            <label>13 hours ago by Jane Smit</label>
+                                            <p>Film festivals used to be do-or-die moments for movie makers. They were where you met
+                                                the producers that could fund your project, and if the buyers liked your flick, they’d pay to
+                                                Fast-forward and… Read Mor</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="field__activity">
+                                        
+                                        <div class="circle"></div>
+                                        <div class="field__activity-content">
+                                            <h6>Who Needs Sundance When You’ve Got Crowdfunding</h6>
+                                            <label>13 hours ago by Jane Smit</label>
+                                            <p>Film festivals used to be do-or-die moments for movie makers. They were where you met
+                                                the producers that could fund your project, and if the buyers liked your flick, they’d pay to
+                                                Fast-forward and… Read Mor</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="panel">
+                            <div class="panel__title">
+                                <div class="panel__title-left">
+                                    <span>Visitors Locations</span>
+                                    <label>geo-presentation</label>
+                                </div>
+                                <div class="panel__title-right">
+                                    <i class="fas fa-angle-up"></i>
+                                    <i class="fas fa-wrench"></i>
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="panel__body">
+                                <div class="geo-container">
+                                    <div class="geo-container__content">
+                                        <div class="geo-container__title">
+                                            <h6>125.7k Views from 60 countries</h6>
+                                        </div>
+                                        <div class="fields">
+                                            <div class="field__geolocation">
+                                                <label>United States</label>
+                                                <label>33%</label>
+                                            </div>
+                                            <div class="field__geolocation">
+                                                <label>France</label>
+                                                <label>27%</label>
+                                            </div>
+                                            <div class="field__geolocation">
+                                                <label>Germany</label>
+                                                <label>16%</label>
+                                            </div>
+                                            <div class="field__geolocation">
+                                                <label>Spain</label>
+                                                <label>11%</label>
+                                            </div>
+                                            <div class="field__geolocation">
+                                                <label>Britain</label>
+                                                <label>10%</label>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div id="regions_div" class="chart__container"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-flex">
+                            <div class="panel">
+                                <div class="panel__title">
+                                    <div class="panel__title-left">
+                                        <span>To Do List</span>
+                                        <label>Sample Tasks</label>
+                                    </div>
+                                    <div class="panel__title-right">
+                                        <i class="fas fa-angle-up"></i>
+                                        <i class="fas fa-wrench"></i>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="panel__body">
+                                    <div class="fields">
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        <div class="field__to-do">
+                                            <input type="checkbox">
+                                            <label>Schedule meeting with new client</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel__title">
+                                    <div class="panel__title-left">
+                                        <span>Daily active users</span>
+                                        <label>Sessions</label>
+                                    </div>
+                                    <div class="panel__title-right">
+                                        <i class="fas fa-angle-up"></i>
+                                        <i class="fas fa-wrench"></i>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="panel__body">
+                                    <div class="widget-weather">
+                                        <div class="today-weather">
+                                            <div class="day-weather">
+                                                <label>Monday, 07:30 AM F </label>
+                                                <i class="fas fa-cloud-moon"></i>
+                                            </div>
+                                            <div class="place-weather">
+                                                <h6>Texas</h6>
+                                                <h6>Partly Cloudy Night</h6>
+                                            </div>
+                                        </div>
+                                        <div class="celsius-weather">
+                                            <h6>23°</h6>
+                                        </div>
+                                        <div class="week-weather">
+                                            <div class="fields fields--flex">
+                                                <div class="field__weather-week">
+                                                    <label>Mon</label>
+                                                    <h6>25°</h6>
+                                                    <i class="fas fa-sun"></i>
+                                                    <h6>15 km/h</h6>
+                                                </div>
+                                                <div class="field__weather-week">
+                                                    <label>Tue</label>
+                                                    <h6>25°</h6>
+                                                    <i class="fas fa-cloud"></i>
+                                                    <h6>12 km/h</h6>
+                                                </div>
+                                                <div class="field__weather-week">
+                                                    <label>Wed</label>
+                                                    <h6>27°</h6>
+                                                    <i class="fas fa-cloud"></i>
+                                                    <h6>14 km/h</h6>
+                                                </div>
+                                                <div class="field__weather-week">
+                                                    <label>Thu</label>
+                                                    <h6>28°</h6>
+                                                    <i class="fas fa-cloud"></i>
+                                                    <h6>15 km/h</h6>
+                                                </div>
+                                                <div class="field__weather-week">
+                                                    <label>Fri</label>
+                                                    <h6>28°</h6>
+                                                    <i class="fas fa-sun"></i>
+                                                    <h6>11 km/h</h6>
+                                                </div>
+                                                <div class="field__weather-week">
+                                                    <label>Sat</label>
+                                                    <h6>26°</h6>
+                                                    <i class="fas fa-cloud"></i>
+                                                    <h6>10 km/h</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+</body>
+</html>

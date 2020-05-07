@@ -1,0 +1,47 @@
+header{
+    padding: 1rem;
+    background-color: $light-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i{
+        color: $gray-content;
+    }
+    .information-container{
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        .notification-container{
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: 1rem;
+            vertical-align: middle;
+            .number-notification{
+                position: absolute;
+                top: -9px;
+                right: -5px;
+                width: 16px;
+                height: 20px;
+                background-color: #1abb9c;
+                color: #ffff;
+                z-index: 1;
+                text-align: center;
+                border-radius: 3px;
+            }
+        }
+        p, i{
+            margin-right: .5rem;
+            display: flex;
+            align-items: center;
+        }
+        .user-avatar{
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/jhon-doe.jpg');
+            background-size: cover;
+        }
+    }
+}
